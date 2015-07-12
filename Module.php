@@ -8,7 +8,6 @@ use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
 
 class Module implements
-    BootstrapListenerInterface,
     ConfigProviderInterface,
     AutoloaderProviderInterface,
     ServiceProviderInterface

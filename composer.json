@@ -12,9 +12,10 @@
   "license" : "MIT",
   "keywords" : [ "zf2", "module" ],
   "autoload" : {
-    "psr-4" : {
-      "HtUserRegistration\\" : "src/"
-    }
+    "psr-0" : {
+      "UserRegistration" : "src/"
+    },
+    "classmap" : [ "./Module.php" ]
   },
   "suggest" : { },
   "type" : "library",
