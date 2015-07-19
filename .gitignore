@@ -1,0 +1,12 @@
+vendor
+
+composer.lock
+
+.idea
+
+composer.phar
+
+build
+.buildpath
+.settings
+.project
