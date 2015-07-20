@@ -5,6 +5,11 @@ return [
             'UserRegistration' => __DIR__ . '/../view',
         ],
     ],
+    'controllers' => array(
+        'invokables' => array(
+            'register' => 'UserRegistration\Controller\RegisterController',
+        ),
+    ),
     'router' => array(
         'routes' => array(
             'zfcuser/register' => array(

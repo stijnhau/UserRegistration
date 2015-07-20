@@ -1,45 +1,28 @@
 <?php
 namespace UserRegistration;
 
-use Zend\EventManager\EventInterface;
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\BootstrapListenerInterface;
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
 
-class Module implements
-    ConfigProviderInterface,
-    AutoloaderProviderInterface,
-    ServiceProviderInterface
+class Module implements ServiceProviderInterface
 {
-
-    /**
-     * {@inheritDoc}
-     */
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getAutoloaderConfig()
     {
-        return [
-            'Zend\Loader\StandardAutoloader' => [
-                'namespaces' => [
-                    __NAMESPACE__ => __DIR__,
-                ],
-            ],
-        ];
+        return array(
+            'Zend\Loader\StandardAutoloader' => array(
+                'namespaces' => array(
+                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+                ),
+            ),
+        );
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getServiceConfig()
     {
-        return include __DIR__ . '/config/service.config.php';
+        return include __DIR__ . '/config/services.config.php';
     }
 }

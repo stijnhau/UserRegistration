@@ -7,7 +7,27 @@
  */
 
 $options = array(
+    /**
+     * Boolean
+     * If we send an activation mail and only activated users are allowed to sign in.
+     * Default: true
+     * [WIP]
+     */
+    'enableActivation' => true,
 
+    /**
+     * Wat is the default registration field.
+     * Default: username
+     * [WIP]
+     */
+     'registrationField' => 'username',
+
+     /**
+      * Do we want the user to input the gender.
+      * Default: true
+      * [WIP]
+      */
+     'displayGender' => true,
 );
 
 /**
