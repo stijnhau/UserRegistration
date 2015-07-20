@@ -1,9 +1,10 @@
 <?php
 namespace UserRegistration;
 
-use Zend\ModuleManager\Feature\ServiceProviderInterface;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 
-class Module implements ServiceProviderInterface
+class Module implements
+    AutoloaderProviderInterface
 {
     public function getConfig()
     {
