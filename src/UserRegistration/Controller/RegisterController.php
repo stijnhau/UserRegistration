@@ -37,7 +37,14 @@ class RegisterController extends AbstractActionController
      */
     public function indexAction()
     {
+        $sm = $this->getServiceLocator();
+
+        $registerForm = $sm->get('zfcuser_register_form');
+
         // TODO Auto-generated RegisterController::indexAction() default action
-        return new ViewModel();
+        return array(
+            'form' => $registerForm,
+            'enableRegistration' =>  $sm->get('zfcuser_module_options')->getEnableRegistration(),
+        );
     }
 }
