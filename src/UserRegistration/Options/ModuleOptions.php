@@ -25,6 +25,4 @@ class ModuleOptions extends AbstractOptions
      * Do we want the user to input the gender.
      */
     protected $displayGender = true;
-
-
 }

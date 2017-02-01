@@ -1,9 +1,9 @@
 <?php
 namespace UserRegistration\Form;
 
+use UserRegistration\Options\ModuleOptions;
 use ZfcUser\Form\Base;
 use ZfcUser\Options\RegistrationOptionsInterface;
-use UserRegistration\Options\ModuleOptions;
 
 class Register extends Base
 {

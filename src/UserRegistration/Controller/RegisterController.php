@@ -1,9 +1,8 @@
 <?php
 namespace UserRegistration\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
 use UserRegistration\Options\ModuleOptions;
+use Zend\Mvc\Controller\AbstractActionController;
 
 /**
  * RegisterController

@@ -1,6 +1,6 @@
 <?php
-use Zend\ServiceManager\ServiceLocatorInterface;
 use UserRegistration\Options;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
 return [
     'factories' => array(
