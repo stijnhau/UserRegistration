@@ -1,9 +1,9 @@
 {
   "name" : "stijnhau/user-registration",
-  "description" : "A Zend Framework 2 module which extends the registration feature of ZfcUser with email address verification",
+  "description" : "A Zend Framework 3 module which extends the registration feature of ZfcUser with email address verification",
   "require" : {
-    "php" : ">=5.4",
-    "zf-commons/zfc-user" : ">=0.1,<2.0",
+    "php" : ">=5.6",
+    "zf-commons/zfc-user" : ">=3.0.0",
     "zendframework/zend-mail" : ">2.4.0"
   },
   "require-dev" : {
