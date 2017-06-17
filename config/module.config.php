@@ -1,4 +1,8 @@
 <?php
+namespace UserRegistration;
+
+use Zend\Router\Http\Literal;
+
 return [
     'service_manager' => array(
         'factories' => array(
