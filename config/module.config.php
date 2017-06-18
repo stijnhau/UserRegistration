@@ -15,14 +15,14 @@ return [
         ],
     ],
     'controllers' => array(
-        'invokables' => array(
-            'register' => 'UserRegistration\Controller\RegisterController',
+        'factories' => array(
+            'register' => 'UserRegistration\Factory\Controller\Register',
         ),
     ),
     'router' => array(
         'routes' => array(
             'zfcuser/register' => array(
-                'type' => 'Literal',
+                'type' => Literal::class,
                 'priority' => 1000,
                 'options' => array(
                     'route' => '/user/register',

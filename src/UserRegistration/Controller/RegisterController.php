@@ -15,6 +15,7 @@ use Zend\Mvc\Controller\AbstractActionController;
 class RegisterController extends AbstractActionController
 {
     protected $options;
+    protected $serviceLocator;
 
     public function setOptions(ModuleOptions $options)
     {
@@ -30,6 +31,21 @@ class RegisterController extends AbstractActionController
         return $this->options;
     }
 
+    /**
+     * @return the $serviceLocator
+     */
+    public function getServiceLocator()
+    {
+        return $this->serviceLocator;
+    }
+
+    /**
+     * @param field_type $serviceLocator
+     */
+    public function setServiceLocator($serviceLocator)
+    {
+        $this->serviceLocator = $serviceLocator;
+    }
 
     /**
      * The default action - show the home page
