@@ -45,7 +45,7 @@ class Register extends Base
         $this->setModuleOptions($optionsMod);
         parent::__construct($name);
 
-        $this->remove('id');
+        $this->remove('userId');
 
         $this->get('submit')->setLabel('Register');
         $this->getEventManager()->trigger('init', $this);
