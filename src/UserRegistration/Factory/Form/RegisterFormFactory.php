@@ -15,13 +15,22 @@ class RegisterFormFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceManager)
     {
+        return $this->__invoke($serviceManager, "ExclusionIpServiceFactory");
+    }
+
+    /**
+     * {@inheritDoc}
+     * @see \Zend\ServiceManager\Factory\FactoryInterface::__invoke()
+     */
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null)
+    {
         /* @var $options Options\ModuleOptions */
-        $options = $serviceManager->get('zfcuser_module_options');
+        $options = $container->get('zfcuser_module_options');
 
         /* @var $optionsMod Options\ModuleOptions */
-        $optionsMod = $serviceManager->get('userRegistration_module_options');
+        $optionsMod = $container->get('userRegistration_module_options');
 
-        $userMapper = $serviceManager->get('zfcuser_user_mapper');
+        $userMapper = $container->get('zfcuser_user_mapper');
 
         $emailValidator = new NoRecordExists(array(
             'mapper' => $userMapper,
@@ -40,7 +49,7 @@ class RegisterFormFactory implements FactoryInterface
         );
 
         $form = new Register(null, $options, $optionsMod);
-        // $form->setCaptchaElement($sm->get('zfcuser_captcha_element'));
+        // $form->setCaptchaElement($container->get('zfcuser_captcha_element'));
         $form->setInputFilter($inputFilter);
 
         return $form;
